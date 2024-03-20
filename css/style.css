@@ -480,7 +480,8 @@ footer p {
     font-size: 24px;
   }
   header .logo {
-  padding-left: 10px;
+    padding-left: 10px;
+  }
   header .nav {
     opacity: 0;
     width: 300px;
