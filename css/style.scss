@@ -307,6 +307,9 @@ footer {
 // SPヘッダー
 // ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＊
   header {
+    .logo {
+      padding-left: 10px;
+    }
     .nav {
       opacity: 0;
       width: 300px;
@@ -473,7 +476,7 @@ footer {
   // ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＊
   .to-reservation {
     a {
-      font-size: 18x;
+      font-size: 18px;
     }
   }
 }
