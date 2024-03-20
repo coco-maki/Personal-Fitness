@@ -1,0 +1,626 @@
+@charset "UTF-8";
+.load {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 2s;
+}
+
+#oneonone {
+  margin-bottom: 100px;
+}
+#oneonone .oneonone-title {
+  display: flex;
+  align-items: flex-end;
+}
+#oneonone .oneonone-title h2 {
+  padding: 0 0 50px 50px;
+  font-size: 44px;
+  width: 50%;
+  text-align: left;
+  text-decoration: underline; /* 下線 */
+  text-decoration-thickness: 0.3em; /* 線の太さ */
+  -webkit-text-decoration-color: #FF8C50;
+          text-decoration-color: #FF8C50; /* 線の色 */
+  text-underline-offset: -0.1em; /* 線の位置。テキストに重なるようにやや上部にする */
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none; /* 下線と文字列が重なる部分でも下線が省略されない（線が途切れない） */
+}
+#oneonone .oneonone-title span {
+  white-space: normal;
+}
+#oneonone .oneonone-title img {
+  width: 50%;
+  height: calc(100vh - 72px);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#oneonone .oneonone-text {
+  margin: 20px 0 0 50px;
+}
+#oneonone .oneonone-text p {
+  text-align: left;
+}
+#oneonone .oneonone-bottom-img {
+  margin: 40px 0 0 auto;
+  width: 50%;
+}
+#oneonone .oneonone-bottom-img img {
+  max-width: 100%;
+}
+
+#curriculum .curriculum-title {
+  display: flex;
+  align-items: flex-end;
+}
+#curriculum .curriculum-title h2 {
+  padding: 0 0 50px 50px;
+  font-size: 44px;
+  width: 50%;
+  text-align: left;
+  text-decoration: underline; /* 下線 */
+  text-decoration-thickness: 0.3em; /* 線の太さ */
+  -webkit-text-decoration-color: #FF8C50;
+          text-decoration-color: #FF8C50; /* 線の色 */
+  text-underline-offset: -0.1em; /* 線の位置。テキストに重なるようにやや上部にする */
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none; /* 下線と文字列が重なる部分でも下線が省略されない（線が途切れない） */
+}
+#curriculum .curriculum-title img {
+  width: 50%;
+  height: calc(100vh - 72px);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#curriculum .curriculum-text {
+  margin: 20px 20px 0 50px;
+  text-align: left;
+}
+#curriculum .curriculum-text > p {
+  margin-bottom: 20px;
+}
+#curriculum .curriculum-text ol {
+  background: #f5f5f5;
+  box-shadow: 0px 0px 0px 10px #f5f5f5; /*線の外側*/
+  margin-left: 10px; /*はみ出ないように調整*/
+  margin-right: 10px; /*はみ出ないように調整*/
+  padding: 0.5em 0.5em 0.5em 2em;
+}
+#curriculum .curriculum-text ol li {
+  line-height: 1.5;
+  padding: 0.5em 0;
+  list-style: decimal;
+}
+#curriculum .curriculum-img {
+  width: 50%;
+  margin-top: 40px;
+}
+#curriculum .curriculum-img img {
+  max-width: 100%;
+  margin: 0 0 0 auto;
+}
+
+@media (max-width: 1200px) {
+  #oneonone .oneonone-title h2 {
+    font-size: 40px;
+  }
+  #curriculum .curriculum-title h2 {
+    font-size: 40px;
+  }
+}
+@media (max-width: 1100px) {
+  #oneonone .oneonone-title h2 {
+    font-size: 32px;
+  }
+  #curriculum .curriculum-title h2 {
+    font-size: 32px;
+  }
+}
+@media (max-width: 960px) {
+  #oneonone .oneonone-title {
+    flex-direction: column;
+  }
+  #oneonone .oneonone-title h2 {
+    padding: 0 0 10px 0;
+    text-align: center;
+    width: 100%;
+  }
+  #oneonone .oneonone-title img {
+    width: 100%;
+  }
+  #oneonone .oneonone-text {
+    margin: 20px 5% 0 5%;
+    text-align: justify;
+  }
+  #oneonone .oneonone-bottom-img {
+    width: 100%;
+    margin: 20px 0 0 0;
+  }
+  #curriculum .curriculum-title {
+    flex-direction: column-reverse;
+  }
+  #curriculum .curriculum-title h2 {
+    font-size: 28px;
+    width: 100%;
+    text-align: center;
+    padding: 0 0 10px 0;
+  }
+  #curriculum .curriculum-title img {
+    width: 100%;
+  }
+  #curriculum .curriculum-text {
+    margin: 20px 5% 0 5%;
+  }
+  #curriculum .curriculum-img {
+    width: 100%;
+  }
+}
+.wrapper {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 4%;
+}
+
+.content .page-title {
+  font-size: 32px;
+  font-weight: normal;
+  margin-bottom: 30px;
+  text-decoration: underline; /* 下線 */
+  text-decoration-thickness: 0.3em; /* 線の太さ */
+  -webkit-text-decoration-color: #FF8C50;
+          text-decoration-color: #FF8C50; /* 線の色 */
+  text-underline-offset: -0.1em; /* 線の位置。テキストに重なるようにやや上部にする */
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none; /* 下線と文字列が重なる部分でも下線が省略されない（線が途切れない） */
+}
+.content .course {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+.content .course-image {
+  width: 50%;
+}
+.content .course-text {
+  width: 42%;
+}
+.content .course-text p {
+  margin-bottom: 30px;
+  text-align: justify;
+}
+
+@media (max-width: 960px) {
+  .content .course {
+    flex-direction: column;
+  }
+  .content .course-image {
+    width: 100%;
+  }
+  .content .course-text {
+    width: 100%;
+    padding-top: 20px;
+  }
+}
+html {
+  font-size: 100%;
+}
+
+body {
+  color: #333;
+  font-family: "游ゴシック体", "YuGothic", "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+  letter-spacing: 0.1em;
+  text-align: center;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  max-width: 1200px;
+  padding-inline: 30px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #f5f5f5;
+}
+
+.section-title {
+  display: inline-block;
+  border-bottom: solid 6px #FF8C50;
+  margin-block: 50px;
+  font-size: 40px;
+  text-align: center;
+}
+
+.anchor {
+  margin-top: 72px;
+}
+
+.detail {
+  text-align: center;
+  display: inline-block;
+  margin: 0 auto;
+}
+.detail a {
+  margin-bottom: 40px;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  padding: 10px;
+  font-size: 18px;
+  text-align: center;
+}
+.detail a::before {
+  background: #FF8C50;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  transform: scale(0, 1);
+  transform-origin: right top;
+  transition: transform 0.8s;
+  z-index: -1;
+}
+.detail a:hover {
+  color: #fff;
+}
+.detail a:hover::before {
+  transform-origin: left top;
+  transform: scale(1, 1);
+  transition: transform 0.8s 0.1s;
+}
+
+.fadein {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px;
+  background-color: #fff;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+header .logo {
+  padding-left: 40px;
+}
+header .logo img {
+  width: 160px;
+}
+header .nav {
+  display: flex;
+  align-items: center;
+}
+header .nav ul {
+  display: flex;
+}
+header .nav ul li {
+  padding-right: 30px;
+}
+header .nav > a {
+  display: block;
+  color: #fff;
+  font-weight: bold;
+  background-color: #FF8C50;
+  padding: 23px 30px;
+}
+header .hamburger {
+  display: none;
+}
+header #mask {
+  display: none;
+}
+
+.main-visual {
+  position: relative;
+}
+.main-visual img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: calc(100vh - 72px);
+}
+.main-visual h2, .main-visual p {
+  position: absolute;
+  right: 15px;
+  color: #fff;
+  text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.4);
+}
+.main-visual h2 {
+  font-size: 40px;
+  bottom: 200px;
+}
+.main-visual p {
+  bottom: 170px;
+  margin-top: 50px;
+  font-size: 24px;
+}
+
+.concept-contents {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.concept-contents-left, .concept-contents-right {
+  width: 50%;
+  padding: 25px;
+}
+.concept-contents-left h3, .concept-contents-right h3 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  padding-top: 30px;
+}
+.concept-contents-left img, .concept-contents-right img {
+  padding-bottom: 10px;
+}
+.concept-contents-left p, .concept-contents-right p {
+  text-align: justify;
+  padding-bottom: 40px;
+}
+
+.price a {
+  transition: 0.3s;
+}
+.price a:hover {
+  opacity: 0.5;
+}
+.price dl {
+  padding-inline: 20%;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 20px;
+}
+.price dl dt, .price dl dd {
+  margin-bottom: 20px;
+}
+.price dl dt {
+  width: 80%;
+  text-align: left;
+  border-bottom: 1px dotted #333;
+}
+.price dl dd {
+  width: 20%;
+}
+.price dl .price-top {
+  margin-top: 60px;
+}
+.price dl .price-bottom {
+  margin-bottom: 60px;
+}
+
+.location .container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding-block: 60px;
+}
+.location .container .map {
+  width: 50%;
+}
+.location .container dl {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  text-align: left;
+}
+.location .container dl dt {
+  width: 25%;
+}
+.location .container dl dd {
+  width: 75%;
+}
+.location .container dl dt, .location .container dl dd {
+  border-bottom: 1px solid #333;
+  text-align: left;
+  margin-bottom: 20px;
+}
+.location .container dl dt:nth-child(3), .location .container dl dd:nth-child(4) {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.to-reservation {
+  margin-top: 100px;
+}
+.to-reservation a {
+  color: #fff;
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  font-size: 30px;
+  font-weight: bold;
+  background-color: #FF8C50;
+  border: 3px solid #FF8C50;
+  border-radius: 10px;
+  padding: 20px 40px;
+  transition: 0.3s;
+}
+.to-reservation a:hover {
+  background-color: #fff;
+  border: 3px solid #FF8C50;
+  color: #FF8C50;
+}
+
+footer {
+  margin-top: 80px;
+}
+footer p {
+  font-size: 12px;
+}
+
+@media (max-width: 960px) {
+  body {
+    font-size: 14px;
+  }
+  .container {
+    padding-inline: 10px;
+  }
+  .section-title {
+    padding-top: 0;
+    margin-block: 0 20px;
+  }
+  header .nav {
+    opacity: 0;
+    width: 300px;
+    background: #fff;
+    padding: 25px;
+    position: fixed;
+    flex-direction: column;
+    top: 0;
+    left: -300px;
+    bottom: 0;
+    opacity: 0;
+    overflow-y: auto;
+    transition: 0.5s;
+    z-index: 20;
+  }
+  header .nav ul {
+    flex-direction: column;
+  }
+  header .nav ul li {
+    padding-bottom: 20px;
+    padding-right: 0;
+  }
+  header .hamburger {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    position: fixed;
+    top: 22px;
+    right: 18px;
+    transition: 0.5s;
+    z-index: 20;
+    display: block;
+  }
+  header .hamburger span {
+    width: 30px;
+    height: 2px;
+    background-color: #121212;
+    border-radius: 4px;
+    display: block;
+    position: absolute;
+    left: 0;
+    transition: 0.5s;
+  }
+  header .hamburger span:nth-child(1) {
+    top: 4px;
+  }
+  header .hamburger span:nth-child(2) {
+    top: 14px;
+  }
+  header .hamburger span:nth-child(3) {
+    bottom: 4px;
+  }
+  .open .nav {
+    opacity: 1;
+    left: 0;
+  }
+  .open .hamburger span {
+    background-color: #fff;
+  }
+  .open .hamburger span:nth-child(1) {
+    transform: translateY(10px) rotate(-45deg);
+  }
+  .open .hamburger span:nth-child(2) {
+    opacity: 0;
+  }
+  .open .hamburger span:nth-child(3) {
+    transform: translateY(-10px) rotate(45deg);
+  }
+  .open #mask {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    cursor: pointer;
+    display: block;
+    opacity: 0.8;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+  #mask {
+    transition: 0.5s;
+  }
+  .main-visual {
+    position: static;
+  }
+  .main-visual h2, .main-visual p {
+    position: static;
+    text-align: left;
+    right: 0;
+    color: #333;
+    text-shadow: none;
+    padding-left: 30px;
+  }
+  .main-visual h2 {
+    font-size: 24px;
+    margin-top: 30px;
+  }
+  .main-visual p {
+    margin-top: 0;
+    font-size: 16px;
+  }
+  .concept-contents {
+    flex-direction: column;
+    gap: 0;
+  }
+  .concept-contents-left, .concept-contents-right {
+    width: 100%;
+    padding: 0;
+  }
+  .concept-contents p {
+    padding-bottom: 20px;
+  }
+  .price dl {
+    padding-inline: 5%;
+  }
+  .location .container {
+    flex-direction: column;
+    gap: 0;
+    padding-block: 20px;
+  }
+  .location .container .map {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 75%;
+  }
+  .location .container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .location .container dl {
+    width: 80%;
+    margin-top: 20px;
+  }
+  .location .container dl dt, .location .container dl dd {
+    margin-bottom: 5px;
+  }
+  .to-reservation a {
+    font-size: 24px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

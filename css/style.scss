@@ -1,0 +1,474 @@
+@charset "UTF-8";
+
+@import 'parts/concept';
+@import 'parts/course';
+
+html {
+  font-size: 100%;
+}
+
+body {
+  color: #333;
+  font-family: "游ゴシック体", "YuGothic", "游ゴシック Medium",
+    "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+  letter-spacing: 0.1em;
+  text-align: center;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  max-width: 1200px;
+  padding-inline: 30px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #f5f5f5;
+}
+
+.section-title {
+  display: inline-block;
+  border-bottom: solid 6px #FF8C50;
+  margin-block: 50px;
+  font-size: 40px;
+  text-align: center;
+}
+
+.anchor {
+  margin-top: 72px;
+}
+
+.detail {
+  text-align: center;
+  display: inline-block;
+  margin: 0 auto;
+  a {
+    margin-bottom: 40px;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    padding: 10px;
+    font-size: 18px;
+    text-align: center;
+  }
+  a::before {
+    background: #FF8C50;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    transform: scale(0, 1);
+    transform-origin: right top;
+    transition: transform .8s;
+    z-index: -1;
+  }
+  a:hover {
+    color: #fff;
+  }
+  a:hover::before {
+    transform-origin: left top;
+    transform: scale(1, 1);
+    transition: transform .8s .1s;
+  }
+}
+
+.fadein {
+  opacity : 0;
+  transform: translateY(20px);
+  transition: all 1s;
+}
+
+// ヘッダー
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＊
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px;
+  background-color: #fff;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  .logo {
+    padding-left: 40px;
+    img {
+      width: 160px;
+    }
+  }
+  .nav {
+    display: flex;
+    align-items: center;
+    ul {
+      display: flex;
+      li {
+        padding-right: 30px;
+      }
+    }
+    >a {
+      display: block;
+      color: #fff;
+      font-weight: bold;
+      background-color: #FF8C50;
+      padding: 23px 30px;
+    }
+  }
+  .hamburger {
+    display: none;
+  }
+  #mask {
+    display: none;
+  }
+}
+
+// メインビジュアル
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＊
+.main-visual {
+  position: relative;
+  img {
+    object-fit: cover;
+    height: calc(100vh - 72px);
+  }
+  h2, p {
+    position: absolute;
+    right: 15px;
+    color: #fff;
+    text-shadow: 1px 2px 1px rgba(0,0,0,0.4);
+  }
+  h2 {
+    font-size: 40px;
+    bottom: 200px;
+  }
+  p {
+    bottom: 170px;
+    margin-top: 50px;
+    font-size: 24px;
+  }
+}
+
+// コンセプト
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＊
+.concept {
+  &-contents {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    &-left, &-right {
+      width: 50%;
+      padding: 25px;
+      h3 {
+        font-size: 28px;
+        margin-bottom: 20px;
+        padding-top: 30px;
+      }
+      img {
+        padding-bottom: 10px;
+      }
+      p {
+        text-align: justify;
+        padding-bottom: 40px;
+      }
+    }
+  }
+}
+
+// プライス
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＊
+.price {
+  a {
+    transition: 0.3s;
+  }
+  a:hover {
+    opacity: 0.5;
+  }
+  dl {
+    padding-inline: 20%;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 20px;
+    dt, dd {
+      margin-bottom: 20px;
+    }
+    dt {
+      width: 80%;
+      text-align: left;
+      border-bottom: 1px dotted #333;
+    }
+    dd {
+      width: 20%;
+    }
+    .price-top {
+      margin-top: 60px;
+    }
+    .price-bottom {
+      margin-bottom: 60px;
+    }
+  }
+}
+
+// ロケーション
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＊
+.location {
+  .container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding-block: 60px;
+    .map {
+      width: 50%;
+    }
+    dl {
+      display: flex;
+      flex-wrap: wrap;
+      width: 50%;
+      text-align: left;
+      dt {
+        width: 25%;
+      }
+      dd {
+        width: 75%;
+      }
+      dt, dd {
+        border-bottom: 1px solid #333;
+        text-align: left;
+        margin-bottom: 20px;
+      }
+      dt:nth-child(3), dd:nth-child(4) {
+        border-bottom: none;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+// ご予約はこちらから
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＊
+.to-reservation {
+  margin-top: 100px;
+  a {
+    color: #fff;
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: #FF8C50;
+    border: 3px solid #FF8C50;
+    border-radius: 10px;
+    padding: 20px 40px;
+    transition: 0.3s;
+  }
+  a:hover {
+    background-color: #fff;
+    border: 3px solid #FF8C50;
+    color: #FF8C50;
+  }
+}
+
+// フッター
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＊
+footer {
+  margin-top: 80px;
+  p {
+    font-size: 12px;
+  }
+}
+
+// sp
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＊
+@media(max-width:960px) {
+  body {
+    font-size: 14px;
+  }
+  .container {
+    padding-inline: 10px;
+  }
+  .section-title {
+    padding-top: 0;
+    margin-block: 0 20px;
+  }
+// SPヘッダー
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＊
+  header {
+    .nav {
+      opacity: 0;
+      width: 300px;
+      background: #fff;
+      padding: 25px;
+      position: fixed;
+      flex-direction: column;
+      top: 0;
+      left: -300px;
+      bottom: 0;
+      opacity: 0;
+      overflow-y: auto;
+      transition: 0.5s;
+      z-index: 20;
+      ul {
+        flex-direction: column;
+        li {
+          padding-bottom: 20px;
+          padding-right: 0;
+        }
+      }
+    }
+    .hamburger {
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      position: fixed;
+      top: 22px;
+      right: 18px;
+      transition: 0.5s;
+      z-index: 20;
+      display: block;
+      span {
+        width: 30px;
+        height: 2px;
+        background-color: #121212;
+        border-radius: 4px;
+        display: block;
+        position: absolute;
+        left: 0;
+        transition: 0.5s;
+      }
+      span:nth-child(1) {
+        top: 4px;
+      }
+      span:nth-child(2) {
+        top: 14px;
+      }
+      span:nth-child(3) {
+        bottom: 4px;
+      }
+    }
+  }
+  .open {
+    .nav {
+      opacity: 1;
+      left: 0;
+    }
+    .hamburger span {
+    background-color: #fff;
+    }
+    .hamburger span:nth-child(1) {
+      transform: translateY(10px) rotate(-45deg);
+    }
+    .hamburger span:nth-child(2) {
+      opacity: 0;
+    }
+    .hamburger span:nth-child(3) {
+      transform: translateY(-10px) rotate(45deg);
+    }
+    #mask {
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+      cursor: pointer;
+      display: block;
+      opacity: 0.8;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 10;
+    }
+  }
+  #mask {
+    transition: 0.5s;
+  }
+  // SPメインビジュアル
+  // ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＊
+  .main-visual {
+    position: static;
+    h2, p {
+      position: static;
+      text-align: left;
+      right: 0;
+      color: #333;
+      text-shadow: none;
+      padding-left: 30px;
+    }
+    h2 {
+      font-size: 24px;
+      margin-top: 30px;
+    }
+    p {
+      margin-top: 0;
+      font-size: 16px;
+    }
+  }
+// SPコンセプト
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＊
+  .concept {
+    &-contents {
+      flex-direction: column;
+      gap: 0;
+      &-left, &-right {
+        width: 100%;
+        padding: 0;
+      }
+      p {
+        padding-bottom: 20px;
+      }
+    }
+  }
+  // SPプライス
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＊
+  .price {
+    dl {
+      padding-inline: 5%;
+    }
+  }
+// SPロケーション
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＊
+  .location {
+    .container {
+      flex-direction: column;
+      gap: 0;
+      padding-block: 20px;
+      .map {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-top: 75%
+      }
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      dl {
+        width: 80%;
+        margin-top: 20px;
+        dt, dd {
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+  // SPご予約はこちらから
+  // ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＊
+  .to-reservation {
+    a {
+      font-size: 24px;
+    }
+  }
+}

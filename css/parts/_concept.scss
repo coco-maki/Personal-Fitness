@@ -1,0 +1,178 @@
+.load {
+  opacity : 0;
+  transform: translateY(20px);
+  transition: all 2s;
+}
+
+// 完全マンツーマン指導
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＊
+#oneonone {
+  margin-bottom: 100px;
+  .oneonone-title {
+    display: flex;
+    align-items: flex-end;
+    h2 {
+      padding: 0 0 50px 50px;
+      font-size: 44px;
+      width: 50%;
+      text-align: left;
+      text-decoration: underline; /* 下線 */
+      text-decoration-thickness: 0.3em; /* 線の太さ */
+      text-decoration-color: #FF8C50; /* 線の色 */
+      text-underline-offset: -0.1em; /* 線の位置。テキストに重なるようにやや上部にする */
+      text-decoration-skip-ink: none; /* 下線と文字列が重なる部分でも下線が省略されない（線が途切れない） */
+    }
+      span {
+        white-space: normal;
+      }
+    img {
+      width: 50%;
+      height: calc(100vh - 72px);
+      object-fit: cover;
+    }
+  }
+  .oneonone-text {
+    margin: 20px 0 0 50px;
+    p {
+      text-align: left;
+    }
+  }
+  .oneonone-bottom-img {
+    margin: 40px 0 0 auto;
+    width: 50%;
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+// 挫折させないカリキュラム
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＊
+#curriculum {
+  .curriculum-title {
+    display: flex;
+    align-items: flex-end;
+    h2 {
+      padding: 0 0 50px 50px;
+      font-size: 44px;
+      width: 50%;
+      text-align: left;
+      text-decoration: underline; /* 下線 */
+      text-decoration-thickness: 0.3em; /* 線の太さ */
+      text-decoration-color: #FF8C50; /* 線の色 */
+      text-underline-offset: -0.1em; /* 線の位置。テキストに重なるようにやや上部にする */
+      text-decoration-skip-ink: none; /* 下線と文字列が重なる部分でも下線が省略されない（線が途切れない） */
+    }
+    img {
+      width: 50%;
+      height: calc(100vh - 72px);
+      object-fit: cover;
+    }
+  }
+  .curriculum-text {
+    margin: 20px 20px 0 50px;
+    text-align: left;
+    >p {
+      margin-bottom: 20px;
+    }
+    ol {
+      background: #f5f5f5;
+      box-shadow: 0px 0px 0px 10px #f5f5f5;/*線の外側*/
+      margin-left: 10px;/*はみ出ないように調整*/
+      margin-right: 10px;/*はみ出ないように調整*/
+      padding: 0.5em 0.5em 0.5em 2em;
+      li {
+        line-height: 1.5;
+        padding: 0.5em 0;
+        list-style: decimal;
+      }
+    }
+  }
+  .curriculum-img {
+    width: 50%;
+    margin-top: 40px;
+    img {
+      max-width: 100%;
+      margin: 0 0 0 auto;
+    }
+  }
+}
+// sp
+// ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＊
+@media(max-width:1200px) {
+  #oneonone {
+    .oneonone-title {
+      h2 {
+        font-size: 40px;
+      }
+    }
+  }
+  #curriculum {
+    .curriculum-title {
+      h2 {
+        font-size: 40px;
+      }
+    }
+  }
+}
+@media(max-width:1100px) {
+  #oneonone {
+    .oneonone-title {
+      h2 {
+        font-size: 32px;
+      }
+    }
+  }
+  #curriculum {
+    .curriculum-title {
+      h2 {
+        font-size: 32px;
+      }
+    }
+  }
+}
+
+@media(max-width:960px) {
+  #oneonone {
+    .oneonone-title {
+      flex-direction: column;
+      h2 {
+        padding: 0 0 10px 0;
+        text-align: center;
+        width: 100%;
+        // font-size: 32px;
+      }
+      img {
+        width: 100%;
+      }
+    }
+    .oneonone-text {
+      margin: 20px 5% 0 5%;
+      text-align: justify;
+    }
+    .oneonone-bottom-img {
+      width: 100%;
+      margin: 20px 0 0 0;
+    }
+  }
+  #curriculum {
+    .curriculum-title {
+      flex-direction: column-reverse;
+      h2 {
+        font-size: 28px;
+        width: 100%;
+        text-align: center;
+        padding: 0 0 10px 0;
+      }
+      img {
+        width: 100%;
+      }
+    }
+    .curriculum-text {
+      margin: 20px 5% 0 5%;
+    }
+    .curriculum-img {
+      width: 100%;
+    }
+  }
+}
