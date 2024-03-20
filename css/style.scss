@@ -302,6 +302,7 @@ footer {
   .section-title {
     padding-top: 0;
     margin-block: 0 20px;
+    font-size: 24px;
   }
 // SPヘッダー
 // ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＊
@@ -405,12 +406,12 @@ footer {
       padding-left: 30px;
     }
     h2 {
-      font-size: 24px;
+      font-size: 20px;
       margin-top: 30px;
     }
     p {
       margin-top: 0;
-      font-size: 16px;
+      font-size: 14px;
     }
   }
 // SPコンセプト
@@ -422,6 +423,9 @@ footer {
       &-left, &-right {
         width: 100%;
         padding: 0;
+        h3 {
+          font-size: 18px;
+        }
       }
       p {
         padding-bottom: 20px;
@@ -433,6 +437,7 @@ footer {
   .price {
     dl {
       padding-inline: 5%;
+      font-size: 14px;
     }
   }
 // SPロケーション
@@ -468,7 +473,7 @@ footer {
   // ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＊
   .to-reservation {
     a {
-      font-size: 24px;
+      font-size: 18x;
     }
   }
 }
