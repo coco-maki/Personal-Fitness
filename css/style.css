@@ -571,7 +571,7 @@ footer p {
     right: 0;
     color: #333;
     text-shadow: none;
-    padding-left: 30px;
+    padding-left: 10px;
   }
   .main-visual h2 {
     font-size: 20px;
@@ -579,7 +579,7 @@ footer p {
   }
   .main-visual p {
     margin-top: 0;
-    font-size: 14px;
+    font-size: 12px;
   }
   .concept-contents {
     flex-direction: column;
